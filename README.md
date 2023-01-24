@@ -7,6 +7,7 @@
       <a href="https://scholar.google.com/citations?user=YUKPVCoAAAAJ" target='_blank'>Tan Wang</a>,&nbsp;
       <a href="https://scholar.google.com/citations?user=-j1j7TkAAAAJ" target='_blank'>Kevin Lin</a>,&nbsp;
       <a href="https://scholar.google.com/citations?user=lSDISOcAAAAJ" target='_blank'>Lindsey Li</a>,&nbsp;
+      <a href="https://scholar.google.com/citations?user=lSDISOcAAAAJ" target='_blank'>Zhengyuan Yangp;
       <a href="https://scholar.google.com/citations?user=lSDISOcAAAAJ" target='_blank'>Hanwang Zhang</a>,&nbsp;
       <a href="https://scholar.google.com/citations?user=lc45xlcAAAAJ" target='_blank'>Zicheng Liu</a>
       <a href="https://scholar.google.com/citations?user=lc45xlcAAAAJ" target='_blank'>Lijuan Wang</a>
