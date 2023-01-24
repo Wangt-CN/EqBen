@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "eqben"
+version = "0.0.7"
+authors = [
+  { name="Tan Wang", email="wangt97@hotmail.com"},
+]
+description = "eqben is a easy-to-use toolkit which unifies the evaluation of EqBen and some related datasets."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+        "torch>=1.6.0",
+        "Pillow>=8.0.0",
+        "numpy>=1.18.0",
+    ]
+
+[project.urls]
+"Homepage" = "https://github.com/Wangt-CN/EqBen"
