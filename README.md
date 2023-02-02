@@ -36,7 +36,7 @@
 
 
 
-### About
+## About
 
 Welcome to the **EqBen**, which helps to benchmark your Vision-Language Pretrained (VLP) Model effectively and efficiently with a kind of image-text matching task.
 
@@ -48,7 +48,7 @@ This repo contains an *one-stop and ready-to-use* ***pypi toolkit***, supporting
 
 
 
-### Installation & Usage
+## Installation & Usage
 
 ```
 pip install -i https://test.pypi.org/simple/ eqben==0.0.6
@@ -60,12 +60,10 @@ For the specific evaluation step, the users need to further download the data. P
 
 
 
-#### EqBen
+### EqBen
 <p align="center">
   <img src="figs/eqben_show.png" align="center" width="100%">
 </p>
-<br>
-
 ##### 1. Data Download
 
 The user can download the raw image data via onedrive or baidu drive.
@@ -78,9 +76,9 @@ Please refer to the [template (example)](https://github.com/Wangt-CN/EqBen/tree/
 
 Running the evaluation script to get the `score.npy` file, then please submit to our [CodaLab](https://codalab.lisn.upsaclay.fr/competitions/10266) server after zip to obtain the final score.
 
+<br>
 
-
-#### Winoground & VALSE
+### Winoground & VALSE
 Our toolkit also supports the previous Winoground and VALSE benchmark. You can easily import them with following steps.
 
 ##### 1. Data Download
