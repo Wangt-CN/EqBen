@@ -1,6 +1,5 @@
 <br />
 <p align="center">
-  <img src="figs/eqben_logo.png" align="center" width="20%">
   <h3 align="center"><strong>Equivariance Benchmark for Vision-Language Model (EqBen)</strong></h3>
   <p align="center">
       <a href="https://scholar.google.com/citations?hl=en&user=wFduC9EAAAAJ" target='_blank'>Tan Wang</a>,&nbsp;
@@ -16,45 +15,41 @@
   </p>
 
 
+
 </p>
 
 <p align="center">
   <a href="https://wangt-cn.github.io/" target='_blank'>
     <img src="https://img.shields.io/badge/Paper-%F0%9F%93%83-blue">
   </a>
-  <a href="https://wangt-cn.github.io/" target='_blank'>
-    <img src="https://img.shields.io/badge/Project-%F0%9F%94%97-green">
-  </a>
   <a href="https://codalab.lisn.upsaclay.fr/competitions/10266" target='_blank'>
     <img src="https://img.shields.io/badge/CodaLab-%F0%9F%A7%AA-yellow">
   </a>
-  <a href="https://wangt-cn.github.io/" target='_blank'>
-    <img src="https://img.shields.io/badge/%E4%B8%AD%E8%AF%91%E7%89%88-%F0%9F%90%BC-red">
-  </a>
 </p>
 
 
 
-
-
-## About
-
-Welcome to the **EqBen**, which helps to benchmark your Vision-Language Pretrained (VLP) Model effectively and efficiently with a kind of fine-grained image-text matching task.
-
-Compared to recent works ([Winoground](https://arxiv.org/abs/2204.03162v2) and [VALSE](https://aclanthology.org/2022.acl-long.567/)) focusing on minimal semantic changes in *captions*, EqBen pivots on **diverse visual-minimal changes**, automatically curated from time-varying visual contents in natural videos and synthetic engines with more precise control.
-
-<br>
-
-<p align="center">
-  <img src="figs/eqben_overview.png" align="center" width="60%">
-  <figcaption align = "center"><b>Fig.1 EqBen</b></figcaption>
-</p>
-
-This repo contains an *one-stop and ready-to-use* ***pypi toolkit***, supporting multiple evaluation needs.
+<img src="figs/eqben.png" align="center" width="100%">
 
 
 
-## What can you get from this Repo?
+​                Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to diagnose the Vision-Language foundation models.
+
+<br><br />
+
+# About
+
+This study explores the concept of equivariance in vision-language foundation models (VLMs), focusing specifically on the multimodal similarity function that is not only the major training objective but also the core delivery to support downstream tasks. Unlike the existing image-text similarity objective which only categorizes matched pairs as similar and unmatched pairs as dissimilar, equivariance also requires similarity to vary faithfully according to the semantic changes. Our key contribution are two-folds:
+
+1. A novel benchmark named **EqBen** (Equivariant Benchmark) to benchmark VLMs with **visual-minimal change** samples.
+2. A plug-and-play regularization loss **EqSim** (Equivariant Similarity Learning) to improve the equivariance of current VLMs.
+3. Our toolkit (this repo) provide an **one-stop evaluation**: not only for our EqBen, but also for previous related benchmarks (Winoground, VALSE, etc).
+
+
+
+<br><br />
+
+# What can you get from this Repo?
 
 - 🙋‍♂️ **Q:** I just want to check the samples in EqBen.
 
@@ -71,6 +66,32 @@ This repo contains an *one-stop and ready-to-use* ***pypi toolkit***, supporting
 - 🙋‍♂️ **Q:** I want to also evaluate my VL model on previous [Winoground](https://arxiv.org/abs/2204.03162v2) or [VALSE](https://aclanthology.org/2022.acl-long.567/) dataset.
 
   ✌️  **A:** We also support the convenient evaluation script of Winoground and VALSE. Please follow the steps [here](https://github.com/Wangt-CN/EqBen#winoground--valse).
+
+  
+
+- 🙋‍♂️ **Q:** I want to try your proposed algorithm EqSim.
+
+  🌟 **A:** Please check the implementation of EqSim here.
+
+
+
+<br><br />
+
+# EqBen
+
+Welcome to the **EqBen**, which helps to benchmark your Vision-Language Pretrained (VLP) Model effectively and efficiently with a kind of fine-grained image-text matching task. Compared to recent works ([Winoground](https://arxiv.org/abs/2204.03162v2) and [VALSE](https://aclanthology.org/2022.acl-long.567/)) focusing on minimal semantic changes in *captions*, EqBen pivots on **diverse visual-minimal changes**, automatically curated from time-varying visual contents in natural videos and synthetic engines with more precise control.
+
+<br>
+
+<p align="center">
+  <img src="figs/eqben_overview.png" align="center" width="60%">
+</p>
+
+​                                                                                                                       Core Design of EqBen
+
+
+
+This repo contains an *one-stop and ready-to-use* ***pypi toolkit***, supporting multiple evaluation needs.
 
 
 
@@ -89,9 +110,9 @@ For the specific evaluation step, the users need to further download the data. P
 ### EqBen
 <p align="center">
   <img src="figs/eqben_show.png" align="center" width="100%">
-  <figcaption align = "center"><b>Fig.2 The overview of our proposed benchmark EqBen, which consists of 5 sub-datasets and can be categorized to natural and synthetic.</b></figcaption>
 </p>
 
+​                           The overview of our proposed benchmark EqBen, which consists of 5 sub-datasets and can be categorized to natural and synthetic
 
 
 
@@ -116,9 +137,9 @@ Running the evaluation script to get the `score.npy` file, then please submit to
 
 <p align="center">
   <img src="figs/valse_show.png" align="center" width="100%">
-  <figcaption align = "center"><b>Fig.3 The overview of the VALSE evaluation set which focuses on the textual minimal change.</b></figcaption>
 </p>
 
+​                                                         The overview of the VALSE evaluation set which focuses on the textual minimal change.
 
 
 
@@ -136,9 +157,23 @@ Please refer to the [**template (example)**](https://github.com/Wangt-CN/EqBen/t
 
 The users can just check the offline score output.
 
+<br><br />
+
+# EqSim
+
+Our EqSim stems from an intuitive example as below, where we depict the similarity scores produced by the current SOTA VLMs FIBER (pretrained on open-source data).
+
+<p align="center">
+  <img src="figs/eqsim_motiv.png" align="center" width="80%">
+</p>
+
+We can find that, FIBER mistakenly assigns a higher similarity score to $\{I_1,T_2\}$ rather than $\{I_1,T_1\}$ ($3.83$ v.s. $3.79$). Furthermore, the changes in similarity scores guided by the semantic change (2$\leftrightarrow$3) are highly inconsistent ($+0.04$ v.s. $-1.81$).  Therefore, the key idea of our EqSim is to regularize the consistency between the two simiarity changes.
+
+Please check the sub-folder for implementation.
+
 
 
 <br>
 
 ### Acknowledgement
-We thank the opensource projects of [Winoground](https://huggingface.co/datasets/facebook/winoground), [VALSE](https://github.com/Heidelberg-NLP/VALSE), [METER](https://github.com/zdou0830/METER), [FIBER](https://github.com/microsoft/FIBER) and [CLIP](https://github.com/openai/CLIP).
+We thank the valuable disscusion with Ziyi Dou. We thank the opensource projects of [Winoground](https://huggingface.co/datasets/facebook/winoground), [VALSE](https://github.com/Heidelberg-NLP/VALSE), [METER](https://github.com/zdou0830/METER), [FIBER](https://github.com/microsoft/FIBER) and [CLIP](https://github.com/openai/CLIP). 
