@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <h3 align="center"><strong>Equivariance Benchmark for Vision-Language Model (EqBen)</strong></h3>
+  <h3 align="center"><strong>Equivariant Similarity for Vision-Language Foundation Models</strong></h3>
   <p align="center">
       <a href="https://scholar.google.com/citations?hl=en&user=wFduC9EAAAAJ" target='_blank'>Tan Wang</a>,&nbsp;
       <a href="https://scholar.google.com/citations?hl=en&user=LKSy1kwAAAAJ" target='_blank'>Kevin Lin</a>,&nbsp;
@@ -14,8 +14,6 @@
   Nanyang Technological University, &nbsp; Microsoft Corporation
   </p>
 
-
-
 </p>
 
 <p align="center">
@@ -28,14 +26,13 @@
 </p>
 
 
-
+<p align="center">
 <img src="figs/eqben.png" align="center" width="100%">
+Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to diagnose the Vision-Language foundation models.
+</p>
 
-
-
-​                Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to diagnose the Vision-Language foundation models.
-
-<br><br />
+           
+<br>
 
 # About
 
@@ -71,7 +68,7 @@ This study explores the concept of equivariance in vision-language foundation mo
 
 - 🙋‍♂️ **Q:** I want to try your proposed algorithm EqSim.
 
-  🌟 **A:** Please check the implementation of EqSim here.
+  🌟 **A:** Please check the implementation of EqSim [here](https://github.com/Wangt-CN/EqBen/tree/main/EqSim).
 
 
 
@@ -84,16 +81,17 @@ Welcome to the **EqBen**, which helps to benchmark your Vision-Language Pretrain
 <br>
 
 <p align="center">
-  <img src="figs/eqben_overview.png" align="center" width="60%">
+  <img src="figs/eqben_overview.png" align="center" width="60%">  <br />
+  Core Design of our EqBen: "Visual-Minimal Change"
 </p>
 
-​                                                                                                                       Core Design of EqBen
+​                                                                                                                       
 
 
 
 This repo contains an *one-stop and ready-to-use* ***pypi toolkit***, supporting multiple evaluation needs.
 
-
+<br>
 
 ## Installation & Usage
 
@@ -105,15 +103,14 @@ Then it can be easily inserted into your VL model framework with little code add
 
 For the specific evaluation step, the users need to further download the data. Please check the following sections for details.
 
-
+<br>
 
 ### EqBen
 <p align="center">
   <img src="figs/eqben_show.png" align="center" width="100%">
+  The overview of our proposed benchmark EqBen, which consists of 5 sub-datasets and can be categorized to natural and synthetic.
 </p>
-
-​                           The overview of our proposed benchmark EqBen, which consists of 5 sub-datasets and can be categorized to natural and synthetic
-
+                     
 
 
 
@@ -131,15 +128,14 @@ Running the evaluation script to get the `score.npy` file, then please submit to
 
 <br>
 
-<br>
 
 ### Winoground & VALSE
 
 <p align="center">
   <img src="figs/valse_show.png" align="center" width="100%">
+   The overview of the VALSE evaluation set which focuses on the textual minimal change.
 </p>
-
-​                                                         The overview of the VALSE evaluation set which focuses on the textual minimal change.
+                                                    
 
 
 
@@ -164,12 +160,12 @@ The users can just check the offline score output.
 Our EqSim stems from an intuitive example as below, where we depict the similarity scores produced by the current SOTA VLMs FIBER (pretrained on open-source data).
 
 <p align="center">
-  <img src="figs/eqsim_motiv.png" align="center" width="80%">
+  <img src="figs/Eqsim_motiv.png" align="center" width="80%">
 </p>
 
 We can find that, FIBER mistakenly assigns a higher similarity score to $\{I_1,T_2\}$ rather than $\{I_1,T_1\}$ ($3.83$ v.s. $3.79$). Furthermore, the changes in similarity scores guided by the semantic change (2$\leftrightarrow$3) are highly inconsistent ($+0.04$ v.s. $-1.81$).  Therefore, the key idea of our EqSim is to regularize the consistency between the two simiarity changes.
 
-Please check the sub-folder for implementation.
+Please check the [sub-folder](https://github.com/Wangt-CN/EqBen/tree/main/EqSim) for implementation.
 
 
 
