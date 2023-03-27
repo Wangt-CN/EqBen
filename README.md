@@ -31,12 +31,12 @@
 Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to diagnose the Vision-Language foundation models.
 </p>
 
-           
+​           
 <br>
 
 # About
 
-This study explores the concept of equivariance in vision-language foundation models (VLMs), focusing specifically on the multimodal similarity function that is not only the major training objective but also the core delivery to support downstream tasks. Unlike the existing image-text similarity objective which only categorizes matched pairs as similar and unmatched pairs as dissimilar, equivariance also requires similarity to vary faithfully according to the semantic changes. Our key contribution are two-folds:
+This study explores the concept of equivariance in vision-language foundation models (VLMs), focusing specifically on the multimodal similarity function that is not only the major training objective but also the core delivery to support downstream tasks. Unlike the existing image-text similarity objective which only categorizes matched pairs as similar and unmatched pairs as dissimilar, equivariance also requires similarity to vary faithfully according to the semantic changes. Our key contributions are three-fold:
 
 1. A novel benchmark named **EqBen** (Equivariant Benchmark) to benchmark VLMs with **visual-minimal change** samples.
 2. A plug-and-play regularization loss **EqSim** (Equivariant Similarity Learning) to improve the equivariance of current VLMs.
@@ -50,7 +50,7 @@ This study explores the concept of equivariance in vision-language foundation mo
 
 - 🙋‍♂️ **Q:** I just want to check the samples in EqBen.
 
-  😁 **A:** No problem! Please check the examples in the below **Fig. 2**. Or you may want to check our paper for more construction details.
+  😁 **A:** No problem! Please check the examples in the below figure. Or you may want to check our paper for more construction details.
 
   
 
@@ -99,7 +99,7 @@ This repo contains an *one-stop and ready-to-use* ***pypi toolkit***, supporting
 pip install eqben
 ```
 
-Then it can be easily inserted into your VL model framework with little code addition. Here we provide a [**code** **template**](https://github.com/Wangt-CN/EqBen/blob/main/example/eqben_eval_template.py) and **examples ([#1](https://github.com/Wangt-CN/EqBen/blob/main/example/eqben_eval_CLIP.py) and [#2](https://github.com/Wangt-CN/EqBen/blob/main/example/eqben_eval_FIBER.py))** for 2 popular VL models (CLIP and FIBER). 
+It's all set! Then it can be easily inserted into your VL model framework with little code addition. Here we provide a [**code** **template**](https://github.com/Wangt-CN/EqBen/blob/main/example/eqben_eval_template.py) and **examples ([#1](https://github.com/Wangt-CN/EqBen/blob/main/example/eqben_eval_CLIP.py) and [#2](https://github.com/Wangt-CN/EqBen/blob/main/example/eqben_eval_FIBER.py))** for 2 popular VL models (CLIP and FIBER). 
 
 For the specific evaluation step, the users need to further download the data. Please check the following sections for details.
 
@@ -110,13 +110,13 @@ For the specific evaluation step, the users need to further download the data. P
   <img src="figs/eqben_show.png" align="center" width="100%">
   The overview of our proposed benchmark EqBen, which consists of 5 sub-datasets and can be categorized to natural and synthetic.
 </p>
-                     
+​                     
 
 
 
 ##### 1. Data Download
 
-The user can download the EqBen raw image data via [Google Clould](https://storage.googleapis.com/eqben-data/eqben.tar.gz).
+The user can download the EqBen raw image data via [Google Clould](https://storage.googleapis.com/eqben-data/eqben_filter.tar.gz) (tar.gz file, ~100G).
 
 ##### 2. Modify Data Path
 
@@ -135,7 +135,7 @@ Running the evaluation script to get the `score.npy` file, then please submit to
   <img src="figs/valse_show.png" align="center" width="100%">
    The overview of the VALSE evaluation set which focuses on the textual minimal change.
 </p>
-                                                    
+​                                                    
 
 
 
@@ -172,4 +172,4 @@ Please check the [sub-folder](https://github.com/Wangt-CN/EqBen/tree/main/EqSim)
 <br>
 
 ### Acknowledgement
-We thank the valuable disscusion with Ziyi Dou. We thank the opensource projects of [Winoground](https://huggingface.co/datasets/facebook/winoground), [VALSE](https://github.com/Heidelberg-NLP/VALSE), [METER](https://github.com/zdou0830/METER), [FIBER](https://github.com/microsoft/FIBER) and [CLIP](https://github.com/openai/CLIP). 
+We thank the valuable disscusions with Ziyi Dou. We thank the opensource projects of [Winoground](https://huggingface.co/datasets/facebook/winoground), [VALSE](https://github.com/Heidelberg-NLP/VALSE), [METER](https://github.com/zdou0830/METER), [FIBER](https://github.com/microsoft/FIBER) and [CLIP](https://github.com/openai/CLIP). 
