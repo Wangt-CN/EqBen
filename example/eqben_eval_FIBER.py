@@ -32,14 +32,14 @@ _transforms = {
 
 DATASET_INFO = {
     "eqben": {"func": eqben_utils.EqBenALL,
-              "img_root": '/home/wangtan/code/ms_intern_github/remedy/private_eqben/source/image',
-              "ann_root": '/home/wangtan/code/ms_intern_github/remedy/private_eqben/source/after_random/ann_json_finegrained_random.json'},
+              "img_root": '/path/to/eqben/image',
+              "ann_root": '/path/to/eqben/annotation/ann_json_finegrained_random.json'},
     'winoground': {"func": eqben_utils.Winoground,
-                   'img_root':'/home1/wangtan/data/winoground/images',
-                   'ann_root':'/home1/wangtan/data/winoground/examples.jsonl'},
+                   'img_root':'/path/to/winoground/images',
+                   'ann_root':'/path/to/winoground/examples.jsonl'},
     'valse': {"func": eqben_utils.VALSE,
-              'img_root':'/home1/wangtan/data/valse/valse_ann/ours/img',
-              'ann_root':'/home1/wangtan/data/valse/valse_ann/ours/global_ann.json'}
+              'img_root':'/path/to/valse/valse_ann/ours/img',
+              'ann_root':'/path/to/valse/valse_ann/ours/global_ann.json'}
 }
 
 

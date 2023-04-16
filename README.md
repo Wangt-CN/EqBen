@@ -17,13 +17,14 @@
 </p>
 
 <p align="center">
-  <a href="https://wangt-cn.github.io/" target='_blank'>
+  <a href="https://arxiv.org/abs/2303.14465" target='_blank'>
     <img src="https://img.shields.io/badge/Paper-%F0%9F%93%83-blue">
   </a>
   <a href="https://codalab.lisn.upsaclay.fr/competitions/10266" target='_blank'>
     <img src="https://img.shields.io/badge/CodaLab-%F0%9F%A7%AA-yellow">
   </a>
 </p>
+
 
 
 <p align="center">
@@ -116,7 +117,7 @@ For the specific evaluation step, the users need to further download the data. P
 
 ##### 1. Data Download
 
-The user can download the EqBen raw image data via [Google Clould](https://storage.googleapis.com/eqben-data/eqben_filter.tar.gz) (tar.gz file, ~100G).
+The user can download the EqBen raw **[image data](https://storage.googleapis.com/eqben-data/eqben_image_full.tar.gz)** (tar.gz file, ~100G) and [**annotation**](https://storage.googleapis.com/eqben-data/eqben_ann/ann_json_finegrained_random.json) (200M) via Google Clould .
 
 ##### 2. Modify Data Path
 
