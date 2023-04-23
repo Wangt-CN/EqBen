@@ -41,11 +41,21 @@ This study explores the concept of equivariance in vision-language foundation mo
 
 1. A novel benchmark named **EqBen** (Equivariant Benchmark) to benchmark VLMs with **visual-minimal change** samples.
 2. A plug-and-play regularization loss **EqSim** (Equivariant Similarity Learning) to improve the equivariance of current VLMs.
-3. Our toolkit (this repo) provide an **one-stop evaluation**: not only for our EqBen, but also for previous related benchmarks (Winoground, VALSE, etc).
+3. Our toolkit (this repo) provide an **one-stop evaluation**: not only for our EqBen, but also for previous related benchmarks (Winoground, VALSE, etc).<br>
 
-
+<p align="center">
+<img src="figs/compare.png" align="center" width="70%">
+</p>
 
 <br><br />
+
+# ToDo List
+
+- [x] Add a subset (10% of the full EqBen, ~**25k** image-text pairs) for the ease of visualization/validation (Please check it [here](https://github.com/Wangt-CN/EqBen#1-data-download))
+
+- [ ] Full evaluation metric on the CodaLab server
+
+  
 
 # What can you get from this Repo?
 
@@ -117,7 +127,9 @@ For the specific evaluation step, the users need to further download the data. P
 
 ##### 1. Data Download
 
-The user can download the EqBen raw **[image data](https://storage.googleapis.com/eqben-data/eqben_image_full.tar.gz)** (tar.gz file, ~100G) and [**annotation**](https://storage.googleapis.com/eqben-data/eqben_ann/ann_json_finegrained_random.json) (200M) via Google Clould .
+- Full-Test Set: the user can download the EqBen raw **[image data](https://storage.googleapis.com/eqben-data/eqben_image_full.tar.gz)** (tar.gz file, ~100G) and [**annotation**](https://storage.googleapis.com/eqben-data/eqben_ann/ann_json_finegrained_random.json) (200M) via Google Clould .
+
+- Sub-Test Set: we also provide a 10% subset (~25K image-text pairs) for the ease of visualization and validation. The label of the EqBen sub-set is **opensource** and the **format follows the winoground style**. But please note that the samples in the subset is **randomly sorted** and not be classified to each category. Please down the raw **[image data](https://storage.googleapis.com/eqben-data/eqben_subset/subset_image.tar.gz)** (tar.gz file, ~10G) and [**annotation**](https://storage.googleapis.com/eqben-data/eqben_subset/eqben_subset_10percent_final.json) via Google Cloud.
 
 ##### 2. Modify Data Path
 
