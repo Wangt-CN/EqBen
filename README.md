@@ -23,6 +23,9 @@
   <a href="https://codalab.lisn.upsaclay.fr/competitions/10266" target='_blank'>
     <img src="https://img.shields.io/badge/CodaLab-%F0%9F%A7%AA-yellow">
   </a>
+  <a href="https://entuedu-my.sharepoint.com/:b:/g/personal/tan317_e_ntu_edu_sg/EUeL5VNXA2ZIng1zd-zH_ccBLBvcVpc5dqysriFtseR33A?e=BhhQJk" target='_blank'>
+    <img src="https://img.shields.io/badge/Slides-📝-red">
+  </a>
 </p>
 
 
@@ -32,8 +35,25 @@
 Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to diagnose the Vision-Language foundation models.
 </p>
 
-​           
+
 <br>
+
+
+
+# News
+
+- Our Paper has been accepted by ICCV 2023 (Oral) !
+
+- We perform some toy experiments for recent popular Multimodal Large Language Model (**MLLM**) on EqBen and observe much inferior results of MiniGPT4 (see below). We also release a [small EqBen subset](https://entuedu-my.sharepoint.com/:u:/g/personal/tan317_e_ntu_edu_sg/ETkpKSsmun1MpBw7FqfUUS8BwTX2gKkTQkDFsfOGCw-9yA?e=KGtpg0) to quantitatively measure the performances of MLLM. Please refer more details and results in Appendix A.4. 
+
+  <p align="center">
+  <img src="figs/minigpt4.png" align="center" width="100%">
+  MiniGPT4 response for a random sample of the proposed EqBen and it is totally wrong.
+  </p>
+
+
+
+
 
 # About
 
