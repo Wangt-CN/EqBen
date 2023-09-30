@@ -42,7 +42,7 @@ Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to
 
 # News
 
-- Due to the unstablity of the CodaLab platform, we decide to publish the whole annotation of EqBen. Please check here for more details.
+- Due to the unstablity of the CodaLab platform, we decide to publish the whole annotation of EqBen. Please check [here](https://github.com/Wangt-CN/EqBen#eqben-1) for more details.
 
 - Our Paper has been accepted by ICCV 2023 (Oral) !
 
@@ -55,7 +55,7 @@ Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to
 
 
 
-
+<br>
 
 # About
 
@@ -77,8 +77,7 @@ This study explores the concept of equivariance in vision-language foundation mo
 - [x] Update the subset of EqBen for MLLM model evaluation 
 - [x] Add a subset (10% of the full EqBen, ~**25k** image-text pairs) for the ease of visualization/validation (Please check it [here](https://github.com/Wangt-CN/EqBen#1-data-download))
 
-- ~~[x] Full evaluation metric on the CodaLab server~~
-  
+  <br>
 
 # What can you get from this Repo?
 
