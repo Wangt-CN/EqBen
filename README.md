@@ -42,6 +42,8 @@ Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to
 
 # News
 
+- Due to the unstablity of the CodaLab platform, we decide to publish the whole annotation of EqBen. Please check here for more details.
+
 - Our Paper has been accepted by ICCV 2023 (Oral) !
 
 - We perform some toy experiments for recent popular Multimodal Large Language Model (**MLLM**) on EqBen and observe much inferior results of MiniGPT4 (see below). We also release a [small EqBen subset](https://entuedu-my.sharepoint.com/:u:/g/personal/tan317_e_ntu_edu_sg/ETkpKSsmun1MpBw7FqfUUS8BwTX2gKkTQkDFsfOGCw-9yA?e=KGtpg0) to quantitatively measure the performances of MLLM. Please refer more details and results in Appendix A.4. 
@@ -70,11 +72,12 @@ This study explores the concept of equivariance in vision-language foundation mo
 <br><br />
 
 # ToDo List
-
+- [x] Opensource the whole annotation of the EqBen
+- [x] Update the EqSim implementation for FIBER
+- [x] Update the subset of EqBen for MLLM model evaluation 
 - [x] Add a subset (10% of the full EqBen, ~**25k** image-text pairs) for the ease of visualization/validation (Please check it [here](https://github.com/Wangt-CN/EqBen#1-data-download))
 
-- [ ] Full evaluation metric on the CodaLab server
-
+- ~~[x] Full evaluation metric on the CodaLab server~~
   
 
 # What can you get from this Repo?
@@ -147,7 +150,9 @@ For the specific evaluation step, the users need to further download the data. P
 
 ##### 1. Data Download
 
-- Full-Test Set: the user can download the EqBen raw **[image data](https://storage.googleapis.com/eqben-data/eqben_image_full.tar.gz)** (tar.gz file, ~100G) and [**annotation**](https://storage.googleapis.com/eqben-data/eqben_ann/ann_json_finegrained_random.json) (200M) via Google Clould .
+- Full-Test Set: the user can download the EqBen raw **[image data](https://storage.googleapis.com/eqben-data/eqben_image_full.tar.gz)** (tar.gz file, ~100G) and [**annotation (after randomize)**](https://storage.googleapis.com/eqben-data/eqben_ann/ann_json_finegrained_random.json) (200M) via Google Clould.
+**[UPDATE-2023-09]** The original annotation is the annotation after randomize (non-public) for the total fairness. And the users are required to upload the results json/np file to CodaLab for getting the final results. Due to the unstability of CodaLab, we decide to public the whole original annotation. This annotation file formalized similar to *Winoground* and can be downloaded [**here**](https://storage.googleapis.com/eqben-data/eqben_ann/private_info_global.json). 
+
 
 - Sub-Test Set: we also provide a 10% subset (~25K image-text pairs) for the ease of visualization and validation. The label of the EqBen sub-set is **opensource** and the **format follows the winoground style**. But please note that the samples in the subset is **randomly sorted** and not be classified to each category. Please down the raw **[image data](https://storage.googleapis.com/eqben-data/eqben_subset/subset_image.tar.gz)** (tar.gz file, ~10G) and [**annotation**](https://storage.googleapis.com/eqben-data/eqben_subset/eqben_subset_10percent_final.json) via Google Cloud.
 
@@ -158,6 +163,11 @@ Please refer to the **[template (example)](https://github.com/Wangt-CN/EqBen/tre
 ##### 3. Submit to Server for Score
 
 Running the evaluation script to get the `score.npy` file, then please submit to our [CodaLab](https://codalab.lisn.upsaclay.fr/competitions/10266) server after zip to obtain the final score. More details about the server evaluation please check the CodaLab website.
+
+**[UPDATE-2023-09]** : As we have totally public the original annotation file, now you have **2 new options** for getting the results:
+- After running the evaluation script and get the `score.npy` file, directly run `python evaluate_eqben_locally.py` to get the results. This is actaully what we do on CodaLab server.
+- Refer to the Winoground and directly use the raw original annotation [file](https://storage.googleapis.com/eqben-data/eqben_ann/private_info_global.json) to evaluate the results by yourself.
+
 
 <br>
 

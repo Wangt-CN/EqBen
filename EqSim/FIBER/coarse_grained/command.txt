@@ -1,0 +1,45 @@
+# baseline irtr training
+
+CUDA_VISIBLE_DEVICES=0,1 python run.py with data_root=/home/wangtan/data/Flickr30k/pyarrow/ num_gpus=2 num_nodes=1 task_finetune_irtr_itm_f30k per_gpu_batchsize=8 load_path=pretrained_model/fiber_pretrain.ckpt
+
+
+# baseline irtr testing
+
+CUDA_VISIBLE_DEVICES=0,1 python run.py with data_root=/home/wangtan/data/Flickr30k/pyarrow/ num_gpus=2 num_nodes=1 task_finetune_irtr_itm_f30k per_gpu_batchsize=32 load_path=/home/wangtan/code/ms_intern_github/remedy/FIBER_clean/coarse_grained/pretrained_model/fiber_coco_irtr_itm.ckpt get_recall_metric=True get_recall_metric_itc=False
+
+
+## ours pairloss + itc
+with data_root=/home/wangtan/data/Flickr30k/pyarrow/ num_gpus=2 num_nodes=1 task_finetune_irtr_itm_f30k_hardneg per_gpu_batchsize=6 num_workers=0 load_path=pretrained_model/fiber_pretrain.ckpt exp_name=DEBUG pairloss='itc' pairloss_group_side=True score_pre_softmax=True
+
+
+
+with data_root=/home/wangtan/data/Flickr30k/pyarrow/ num_gpus=2 num_nodes=1 task_finetune_irtr_itm_f30k_hardneg per_gpu_batchsize=6 num_workers=0 load_path=pretrained_model/fiber_pretrain.ckpt exp_name=DEBUG pairloss='hard_itc' pairloss_group_side=True score_pre_softmax=True
+
+
+with data_root=/home/wangtan/data/Flickr30k/pyarrow/ num_gpus=2 num_nodes=1 task_finetune_irtr_itm_f30k_coco_hardneg per_gpu_batchsize=6 num_workers=0 load_path=pretrained_model/fiber_pretrain.ckpt exp_name=DEBUG pairloss='itc' test_only=True
+
+with data_root=/home/wangtan/data/Flickr30k/pyarrow/ num_gpus=1 num_nodes=1 task_finetune_irtr_itm_f30k_hardneg per_gpu_batchsize=6 num_workers=0 load_path=pretrained_model/fiber_pretrain.ckpt exp_name=DEBUG pairloss='hard_itc' pairloss_group_side=True score_pre_softmax=True image_size=288
+
+
+with data_root=/home/wangtan/data/Flickr30k/pyarrow/ num_gpus=1 num_nodes=1 task_finetune_irtr_itm_f30k_hardneg per_gpu_batchsize=6 num_workers=0 load_path=pretrained_model/fiber_pretrain.ckpt exp_name=DEBUG pairloss='hard_itm' pairloss_img_side=True pairloss_text_side=True pairloss_group_side=True score_pre_softmax=False sample_num=-1 image_size=288 score_activation=linear
+
+
+
+### pretrain
+python run.py with data_root=/home/wangtan/data/Flickr30k/pyarrow/ num_gpus=64 num_nodes=1 task_mlm_itm_itc per_gpu_batchsize=8
+
+
+with data_root=datadrive_d/wangtan/local_file/ms_intern_proj/log/used_dataset num_gpus=1 num_nodes=1 task_pretrain_itm per_gpu_batchsize=8 num_workers=0 load_path=/datadrive_d/wangtan/azure_storage/vigstandard_data/v-tanwang/FIBER-checkpoints/FIBER-clean-0924/fiber_pretrain.ckpt image_size=288
+
+
+with data_root=/home/wangtan/data/Flickr30k/pyarrow/ num_gpus=2 num_nodes=1 task_pretrain_mlm_itm_itc per_gpu_batchsize=8 num_workers=0 load_path=/home/wangtan/code/ms_intern/video_source/action_genome_my/methods/FIBER-main/pretrain_model/fiber_pretrain.ckpt image_size=288 pairloss='hard_itc' pairloss_text_side=True pairloss_img_side=True
+
+### pretrain + eval
+CUDA_VISIBLE_DEVICES=2 python my_demo_batch.py with num_gpus=1 load_path=/home/wangtan/code/ms_intern/video_source/action_genome_my/methods/FIBER-main/pretrain_model/fiber_pretrain.ckpt task_pretrain_mlm_itm_itc eval_name=pretrain_itc eval_data=my_gebc
+
+
+## pretrain ours
+with data_root=/datadrive_d/wangtan/local_file/ms_intern_proj/log/used_dataset num_gpus=1 num_nodes=1 task_pretrain_itc_itm per_gpu_batchsize=8 num_workers=0 load_path=/datadrive_d/wangtan/azure_storage/vigstandard_data/v-tanwang/FIBER-checkpoints/FIBER-clean-0924/fiber_pretrain.ckpt image_size=288 log_dir=/datadrive_d/wangtan/local_file/ms_intern_proj/log exp_name=debug pairloss='itc' pairloss_text_side=True pairloss_img_side=True pairloss_pos_reg=False pairloss_weight=0.2 pairloss_norm=False pairloss_margin=0.1 sample_num=-1 score_activation=None score_pre_softmax=True
+
+
+with data_root=/datadrive_d/wangtan/local_file/ms_intern_proj/log/used_dataset num_gpus=1 num_nodes=1 task_pretrain_itc_itm per_gpu_batchsize=8 num_workers=0 load_path=/datadrive_d/wangtan/azure_storage/vigstandard_data/v-tanwang/FIBER-checkpoints/FIBER-clean-0924/fiber_pretrain.ckpt image_size=288 log_dir=/datadrive_d/wangtan/local_file/ms_intern_proj/log exp_name=debug pairloss='itc' pairloss_text_side=True pairloss_img_side=True pairloss_pos_reg=False pairloss_weight=0.2 pairloss_norm=False pairloss_margin=0.1 sample_num=-1 score_activation=None score_pre_softmax=True
