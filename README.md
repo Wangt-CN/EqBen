@@ -46,15 +46,21 @@ Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to
 
 - Our Paper has been accepted by ICCV 2023 (Oral) !
 
-- We perform some toy experiments for recent popular Multimodal Large Language Model (**MLLM**) on EqBen and observe much inferior results of MiniGPT4 (see below). We also release a [small EqBen subset](https://entuedu-my.sharepoint.com/:u:/g/personal/tan317_e_ntu_edu_sg/ETkpKSsmun1MpBw7FqfUUS8BwTX2gKkTQkDFsfOGCw-9yA?e=KGtpg0) to quantitatively measure the performances of MLLM. Please refer more details and results in Appendix A.4. 
+- We perform some toy experiments for recent popular Multimodal Large Language Model (**MLLM**) on EqBen and observe much inferior results of MiniGPT4 (see below). We also release a [small EqBen subset](https://entuedu-my.sharepoint.com/:u:/g/personal/tan317_e_ntu_edu_sg/ETkpKSsmun1MpBw7FqfUUS8BwTX2gKkTQkDFsfOGCw-9yA?e=KGtpg0) to quantitatively measure the performances of MLLM. See the qualitative and quantitative results below.
 
   <p align="center">
   <img src="figs/minigpt4.png" align="center" width="100%">
   MiniGPT4 response for a random sample of the proposed EqBen and it is totally wrong.
   </p>
+
+  <br>
+  
   <p align="center">
-  <img src="figs/llava_on_eqben.png" align="center" width="100%">
+  <img src="figs/llava_on_eqben.png" align="center" width="60%">  
+    <br>
+  We can clearly see that current open-source MLLM gives a kind of "random answers" for EqBen data.
   </p>
+
 
 
 
