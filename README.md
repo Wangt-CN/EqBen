@@ -52,6 +52,9 @@ Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to
   <img src="figs/minigpt4.png" align="center" width="100%">
   MiniGPT4 response for a random sample of the proposed EqBen and it is totally wrong.
   </p>
+  <p align="center">
+  <img src="figs/llava_on_eqben.png" align="center" width="100%">
+  </p>
 
 
 
