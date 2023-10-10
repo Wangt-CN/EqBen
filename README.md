@@ -42,11 +42,18 @@ Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to
 
 # News
 
+- Randomly check one sample of EqBen with the **latest LLaVA-1.5**, still stuggle!
+
+  <p align="center">
+  <img src="figs/eqben_llava15.jpg" align="center" width="100%">
+  Latest LLaVA-1.5 response for a random sample of the proposed EqBen which is still wrong.
+  </p>
+
 - Due to the unstablity of the CodaLab platform, we decide to publish the whole annotation of EqBen. Please check [here](https://github.com/Wangt-CN/EqBen#eqben-1) for more details.
 
 - Our Paper has been accepted by ICCV 2023 (Oral) !
 
-- We perform some toy experiments for recent popular Multimodal Large Language Model (**MLLM**) on EqBen and observe much inferior results of MiniGPT4 (see below). We also release a [small EqBen subset](https://entuedu-my.sharepoint.com/:u:/g/personal/tan317_e_ntu_edu_sg/ETkpKSsmun1MpBw7FqfUUS8BwTX2gKkTQkDFsfOGCw-9yA?e=KGtpg0) to quantitatively measure the performances of MLLM. See the qualitative and quantitative results below.
+- We perform some toy experiments for recent popular Multimodal Large Language Model (**MLLM**) on EqBen and observe much inferior results of MiniGPT4 (see below). We also release a [small EqBen subset](https://entuedu-my.sharepoint.com/:u:/g/personal/tan317_e_ntu_edu_sg/ETkpKSsmun1MpBw7FqfUUS8BwTX2gKkTQkDFsfOGCw-9yA?e=KGtpg0) to quantitatively measure the performances of MLLM. See the qualitative and quantitative results below or just check our new paper version on ArXiv.
 
   <p align="center">
   <img src="figs/minigpt4.png" align="center" width="100%">
