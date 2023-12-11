@@ -42,6 +42,8 @@ Our proposed EqBen is the first benchmark to focus on "visual-minimal change" to
 
 # News
 
+- Release a light [EqBen data](https://entuedu-my.sharepoint.com/:u:/g/personal/tan317_e_ntu_edu_sg/EcHBRcch6KREvzvGgrN67FMBUSVV4QPTQUiew0bxjcitFw?e=xiJiYL) (~100G -> ~23G) by converting the png image format to jpg.
+
 - Randomly check one sample of EqBen with the **latest LLaVA-1.5**, still stuggle!
 
   <p align="center">
@@ -88,9 +90,14 @@ This study explores the concept of equivariance in vision-language foundation mo
 <br><br />
 
 # ToDo List
+- [x] Opensource the light version of EqBen
+
 - [x] Opensource the whole annotation of the EqBen
+
 - [x] Update the EqSim implementation for FIBER
+
 - [x] Update the subset of EqBen for MLLM model evaluation 
+
 - [x] Add a subset (10% of the full EqBen, ~**25k** image-text pairs) for the ease of visualization/validation (Please check it [here](https://github.com/Wangt-CN/EqBen#1-data-download))
 
   <br>
@@ -167,6 +174,7 @@ For the specific evaluation step, the users need to further download the data. P
 
 - Full-Test Set: the user can download the EqBen raw **[image data](https://drive.google.com/file/d/1e608uhd36ak_v7SnlMVaYcekBc4gBqzn/view?usp=drive_link)** (tar.gz file, ~100G) and [**annotation (after randomize)**](https://drive.google.com/file/d/1-CWEuZ5F0KQ4d94Y9rRtBsMIcqb8V7nm/view?usp=sharing) (200M) via Google Drive.
 **[UPDATE-2023-09]** The original annotation is the annotation after randomize (non-public) for the total fairness. And the users are required to upload the results json/np file to CodaLab for getting the final results. Due to the unstability of CodaLab, we decide to public the whole original annotation. This annotation file formalized similar to *Winoground* and can be downloaded [**here**](https://drive.google.com/file/d/1gNR4K2Cv4rbnjVRdHuBV6PuoJ5MlRXnZ/view?usp=sharing). 
+- **Light** Full-Test Set: to improve the usability, we also provide a light version of EqBen by converting all the png image to the jpg using `convert`. Feel free to download [here](https://entuedu-my.sharepoint.com/:u:/g/personal/tan317_e_ntu_edu_sg/EcHBRcch6KREvzvGgrN67FMBUSVV4QPTQUiew0bxjcitFw?e=xiJiYL). But please note that you may make some small revisement to the path in the annotation (change the `.png` to `.jpg`).
 
 
 - Sub-Test Set: we also provide a 10% subset (~25K image-text pairs) for the ease of visualization and validation. The label of the EqBen sub-set is **opensource** and the **format follows the winoground style**. But please note that the samples in the subset is **randomly sorted** and not be classified to each category. Please down the raw **[image data](https://drive.google.com/file/d/13Iuirsvx34-9F_1Mjhs4Dqn59yokyUjy/view?usp=sharing)** (tar.gz file, ~10G) and [**annotation**](https://drive.google.com/file/d/18BSRf1SnBtGiEc42mzRLirXaBLzYE5Tt/view?usp=sharing) via Google Drive.
